@@ -1,12 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import {Test} from './api/Test';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 import App from './App';
+import { ProductContainer } from './components/ProductContainer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />}/>
+      <Route path="/test" element={<ProductContainer />}/>
+    </Routes>
+  </BrowserRouter>
 );
