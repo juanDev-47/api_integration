@@ -3,13 +3,14 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 
 export const ProductSearch = ({ productSearch }) => {
-  const [textValue, setTextValue] = useState("");
+  const [textValue, setTextValue] = useState("undefined");
 
   const onChange = (e) => {
+      const value = e.target.value === "" ? "undefined" : e.target.value
     if (e.nativeEvent.code === "Enter") {
-      productSearch(e.target.value);
+      productSearch(value);
     }
-    setTextValue(e.target.value);
+    setTextValue(value);
   };
   return (
     <div>

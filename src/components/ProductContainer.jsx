@@ -14,12 +14,10 @@ export const ProductContainer = () => {
   }, [])
 
   const productSearch = (textValue) => {
-    console.log(textValue)
     setLoading(true);
     getAllProducts(textValue).then((res) => {
       setLoading(false);
       setAllDataResults(res.data.results);
-      console.log(allDataResults);
     });
   };
 
