@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 
-export const ProductSearch = ({ productSearch }) => {
-  const [textValue, setTextValue] = useState("undefined");
+export const ProductSearch = ({ productSearch, defaultValue }) => {
+  const [textValue, setTextValue] = useState(defaultValue);
 
   const onChange = (e) => {
-      const value = e.target.value === "" ? "undefined" : e.target.value
+      const value = e.target.value === "" ? defaultValue : e.target.value
     if (e.nativeEvent.code === "Enter") {
       productSearch(value);
     }

@@ -26,7 +26,7 @@ export const ProductContainer = () => {
       <div
         style={{ marginBottom: 24, display: "flex", justifyContent: "center" }}
       >
-        <ProductSearch productSearch={productSearch} />
+        <ProductSearch productSearch={productSearch} defaultValue="undefined" />
       </div>
       <Grid
         container
